@@ -1,6 +1,6 @@
 # actix-webのhttpサーバーをアプリケーションに埋め込む
 
-#TL;DR
+# TL;DR
 ```rust
 #[actix_web::main]
 async fn run(
@@ -266,7 +266,7 @@ fn main() {
 `?`を使わず`match`で処理することで`tx_start.send(/**/)`でエラーを送信
 成功した場合は空の値を送信して`rx_start.recv()`のブロッキングのみ解除する仕組み
 
-`run`の戻り値は`handle::join()`した時まで取り出せないからい必要ない
+`run`の戻り値は`handle::join()`した時まで取り出せないから必要ない
 `?`を消したので空にできる
 
 # 最終コード
